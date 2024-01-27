@@ -18,7 +18,6 @@ return new class extends Migration
             $table->timestamps();
             $table->integer('parent_id')->unsigned()->default(0);
             $table->foreignId('user_id')->constrained('users')->cascadeOnDelete()->cascadeOnUpdate();
-            $table->text('url')->nullable();
             $table->text('content');
         });
     }
